@@ -31,7 +31,6 @@ const db = new Firestore({
             emailAddress: `${currentSubmission.emailAddress}`
         }
          // currentSubmission.id = id;
-         // Add a new document in collection "submissions" with data from post reques
             await db.collection('submissions').doc(data.emailAddress).set(data);
         res.status(200).send(currentSubmission);
     })
