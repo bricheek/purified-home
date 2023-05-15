@@ -20,18 +20,18 @@ const db = new Firestore({
     
     router.post('/', async (req, res) => {
         const request = req.body;
-        // const submission = await new SubmissionService().put(request)
-        const currentSubmission = new Submission();
-          currentSubmission.firstName = req.body.firstName;
-          currentSubmission.lastName = req.body.lastName;
-          currentSubmission.emailAddress = req.body.emailAddress;
-        const data = {
-            firstName: `${currentSubmission.firstName}`,
-            lastName: `${currentSubmission.lastName}`,
-            emailAddress: `${currentSubmission.emailAddress}`
-        }
-         // currentSubmission.id = id;
-            await db.collection('submissions').doc(data.emailAddress).set(data);
+        const submission = await new SubmissionService().put(request)
+        // const currentSubmission = new Submission();
+        //   currentSubmission.firstName = req.body.firstName;
+        //   currentSubmission.lastName = req.body.lastName;
+        //   currentSubmission.emailAddress = req.body.emailAddress;
+        // const data = {
+        //     firstName: `${currentSubmission.firstName}`,
+        //     lastName: `${currentSubmission.lastName}`,
+        //     emailAddress: `${currentSubmission.emailAddress}`
+        // }
+        //  // currentSubmission.id = id;
+        //     await db.collection('submissions').doc(data.emailAddress).set(data);
         res.status(200).send(currentSubmission);
     })
     

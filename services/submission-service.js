@@ -17,13 +17,16 @@ class SubmissionService  {
     async put(request) {
           // create submission object
           const currentSubmission = new Submission();
-          console.log('submission: ' + currentSubmission)
           currentSubmission.firstName = request.firstName;
           currentSubmission.lastName = request.lastName;
           currentSubmission.emailAddress = request.emailAddress;
-          currentSubmission.id = id;
-         // Add a new document in collection "submissions" with data from post reques
-            return await db.collection('submissions').doc(currentSubmission.id).set(currentSubmission);
+        const data = {
+            firstName: `${currentSubmission.firstName}`,
+            lastName: `${currentSubmission.lastName}`,
+            emailAddress: `${currentSubmission.emailAddress}`
+        }
+         // currentSubmission.id = id;
+            await db.collection('submissions').doc(data.emailAddress).set(data);
     }
 }
 
