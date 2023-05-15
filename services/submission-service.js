@@ -6,13 +6,6 @@ const db = new Firestore({
   keyFilename: '../keys/purified-home-4ac6c85e970d.json',
 });
 
-const data = {
-    id: 'guid4',
-    firstName: 'Bon',
-    lastName: 'Scott',
-    emailAddress: 'bon@acdc.com'
-  };
-
 class SubmissionService  {
     async put(request) {
           // create submission object
@@ -20,12 +13,14 @@ class SubmissionService  {
           currentSubmission.firstName = request.firstName;
           currentSubmission.lastName = request.lastName;
           currentSubmission.emailAddress = request.emailAddress;
+          currentSubmission.id = id;
+          // must convert to regular javascript object to insert to db
         const data = {
             firstName: `${currentSubmission.firstName}`,
             lastName: `${currentSubmission.lastName}`,
-            emailAddress: `${currentSubmission.emailAddress}`
+            emailAddress: `${currentSubmission.emailAddress}`,
+            id: `${currentSubmission.id}`
         }
-         // currentSubmission.id = id;
             await db.collection('submissions').doc(data.emailAddress).set(data);
     }
 }
