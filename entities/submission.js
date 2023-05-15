@@ -9,7 +9,7 @@ class Submission {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
-//         // this.id = uuid(this.emailAddress)
+        // this.id = uuid(this.emailAddress)
 }
 }
 module.exports = Submission
