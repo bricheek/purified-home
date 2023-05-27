@@ -1,4 +1,3 @@
-const SubmissionService = require('./services/submission-service.js') ;
 const submission = require('./routes/submission.js');
 const express = require('express');
 const app = express();
