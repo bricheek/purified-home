@@ -1,0 +1,25 @@
+
+I was able to hit endpoint below with ThundeClient - you can use postman or any other client to hit the endpoint and see what's in the database.
+
+URL endpoint:
+ http://purified-home.wl.r.appspot.com/
+
+ request body:
+ {
+    "firstName": "Another test",
+    "lastName": "yep this works",
+    "emailAddress": "thisworks@thisworks.com"
+}
+
+make sure you select 'JSON' as body type.
+Change the entries on right and submit - changing the email makes a new record. If you use the same email it will write over the existing record. 
+
+Firestore database dashboard url - I haven't figured out how to get it to show up in console:
+
+https://console.cloud.google.com/firestore/databases/-default-/data/panel?project=purified-home
+
+NEXT STEPS:
+Render an html form or create a UI app and connect it, so that you can get submissions to post to the database. I started trying to render a form in Node so I could test the posting but I didn't get it to work. I think it is close. 
+
+Ultimately, I think you are going to want to create your UI in a separate repo, perhaps in react or whatever other front end you want to work with. Then your front end will hit the back end endpoints with a fetch call, most likely. 
+

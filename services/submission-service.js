@@ -34,7 +34,7 @@ const db = getFirestore();
 //   keyFilename: purifiedHomeSecret
   // local server key path
   // keyFilename: '../keys/purified-home-4ac6c85e970d.json',
-});
+// });
 
 class SubmissionService  {
     async put(request) {

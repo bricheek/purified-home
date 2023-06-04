@@ -4,16 +4,17 @@
     <title>My App Engine App</title>
   </head>
   <body>
+    <script src="../helpers/form-helper.js"></script>
     <h2>Create a new post</h2>
-    <form method="POST" action="/submit">
+    <form method="POST" id="submission-form" action="http://purified-home.wl.r.appspot.com/">
       <div>
-        <input type="text" first="first" placeholder="first">
+        <input type="text" name="firstName" placeholder="First Name">
       </div>
       <div>
-        <input type="text" last="last" placeholder="last">
+        <input type="text" name="lastName" placeholder="Last Name">
       </div>
       <div>
-        <input type="text" emailAddress="born" placeholder="email">
+        <input type="text" name="emailAddress" placeholder="Email Address">
       </div>
       <div>
         <button type="submit">Submit</button>
