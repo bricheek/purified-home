@@ -1,7 +1,13 @@
 There is a lot of commented out code in the repo right now, just because we are still in experimenting mode. You can delete it if you want to, but we may use some of the ideas for authentication and such.
 
+Update:
+I am now able to see the form rendered on the hompage
+ http://purified-home.wl.r.appspot.com/
 
-I was able to hit endpoint below with ThundeClient - you can use postman or any other client to hit the endpoint and see what's in the database.
+ When I submitted, 
+
+
+I was able to hit endpoint below with ThunderClient - you can use postman or any other client to hit the endpoint and see what's in the database.
 
 URL endpoint:
  http://purified-home.wl.r.appspot.com/
