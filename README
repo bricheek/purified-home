@@ -32,3 +32,5 @@ https://console.cloud.google.com/firestore/databases/-default-/data/panel?projec
 NEXT STEPS:
 I think you are going to want to create your UI in a separate project, perhaps in react or whatever other front end you want to work with. Then your front end will hit the back end endpoints with a fetch call, most likely. The web form is using a fetch call and going to the endpoint already, so that is good progress and will be helpful later.
 
+Also, we will need to get the local service working again. We should set the app up to toggle between the two. Shouldn't be too hard to do.
+
