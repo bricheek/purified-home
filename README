@@ -1,12 +1,15 @@
-There is a lot of commented out code in the repo right now, just because we are still in experimenting mode. You can delete it if you want to, but we may use some of the ideas for authentication and such.
+I tried a lot of stuff, and had a lot of commented out code that I deleted to make this easier to read. I created a branch that has all the commented out code in it so that we can refer to it later if we need any of it. Some of it was around authentication, which will likely need to be enhanced.
 
 Update:
-I am now able to see the form rendered on the hompage
+I am now able to see the form rendered on the homepage
  http://purified-home.wl.r.appspot.com/
 
- When I submitted, 
+ I am also able to submit to the database through the form.
+ The form currently contains the HTML and JS all in one file, which is not really the best way to do it, but it works for now. 
 
+ The form hits the endpoint with a fetch, so when a new UI project is created, we know the endpoint will work and it should be easy to connect to.
 
+--------------------------------
 I was able to hit endpoint below with ThunderClient - you can use postman or any other client to hit the endpoint and see what's in the database.
 
 URL endpoint:
@@ -27,7 +30,5 @@ Firestore database dashboard url - I haven't figured out how to get it to show u
 https://console.cloud.google.com/firestore/databases/-default-/data/panel?project=purified-home
 
 NEXT STEPS:
-Render an html form or create a UI app and connect it, so that you can get submissions to post to the database. I started trying to render a form in Node so I could test the posting but I didn't get it to work. I think it is close. 
-
-Ultimately, I think you are going to want to create your UI in a separate repo, perhaps in react or whatever other front end you want to work with. Then your front end will hit the back end endpoints with a fetch call, most likely. 
+I think you are going to want to create your UI in a separate project, perhaps in react or whatever other front end you want to work with. Then your front end will hit the back end endpoints with a fetch call, most likely. The web form is using a fetch call and going to the endpoint already, so that is good progress and will be helpful later.
 

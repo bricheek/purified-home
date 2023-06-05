@@ -1,3 +1,5 @@
+// Plunked this into the form.html in js script and it worked.
+
 async function postFormDataAsJson({ url, formData }) {
 	const plainFormData = Object.fromEntries(formData.entries());
 	const formDataJsonString = JSON.stringify(plainFormData);
@@ -37,5 +39,5 @@ async function handleFormSubmit(event) {
 	}
 }
 
-const submissionForm = document.getElementById("submission-form");
-submissionForm.addEventListener("submit", handleFormSubmit);
+// const submissionForm = document.getElementById("submission-form");
+// submissionForm.addEventListener("submit", handleFormSubmit);

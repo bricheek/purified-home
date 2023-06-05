@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/views/form.html'));
 });
 
-app.use('/', submission);
+app.post('/', submission);
 // app.use('/submission', submission.route);
 
 
